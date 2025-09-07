@@ -1,71 +1,71 @@
-# [Assignment Type]: [Assignment Title]
-## 🎯 Overview & Purpose
-<!--
-INSTRUCTOR NOTE:
-Write a brief, high-level paragraph explaining the purpose of this assignment.
-What is the core problem the student is trying to solve?
-Why is it important in the context of the course?
--->
-In this assignment, you will practice [Core Concept] by building a [Brief Description of Program]. This will reinforce your understanding of [Skill 1] and [Skill 2].
-## 📚 Learning Objectives
-Upon successful completion of this assignment, you will be able to:
-<!--
-INSTRUCTOR NOTE:
-List 2-4 specific, measurable learning objectives for this assignment.
--->
-- [Objective 1, e.g., "Implement functions that use pointers to modify variables."]
-- [Objective 2, e.g., "Decompose a problem into smaller, testable functions."]
-- [Objective 3, e.g., "Follow a professional, feature-branch Git workflow."]
-## 📋 Instructions & Requirements
-<!--
-INSTRUCTOR NOTE:
-This is the core of the assignment. Provide the detailed prompt, scenario,
-and a clear, numbered list of all functional requirements.
--->
-### The Scenario
-[Provide a clear and engaging scenario for the assignment.]
-### Core Requirements
-You must implement the following functionality:
-1. **Requirement 1:** [Detailed description of the first requirement.]
-2. **Requirement 2:** [Detailed description of the second requirement.]
-3. **Requirement 3:** [And so on...]
-### Constraints
-- You must adhere to the C++ Core Guidelines for naming and style.
-- [Add any other constraints, e.g., "No global variables allowed," "Must use a struct to represent X," etc.]
-## ⚙️ Workflow & Submission
-Follow these steps carefully to set up your environment and submit your work.
-### Part 1: Initial Setup
-1. **Accept the Assignment:** Use the GitHub Classroom link on Canvas to create your assignment repository.
-2. **Clone the Repository:** In your Home Codespace, clone your new assignment repository.
-3. **Add to Workspace:** In the VS Code file explorer, right-click in the empty space below your Home folder and select "Add Folder to Workspace...". Choose your assignment folder to add it.
-### Part 2: Development Cycle
-1. **Create a Branch:** Before writing any code, create a new branch for your work. Use our standard naming conventions (`add/`, `fix/`, `update/`).
-```bash
-git checkout -b add/feature-name
-```
-2. **Write Your Code:** Implement the required features in the appropriate `src/` and `include/` files.
-3. **Run the Tests:** The `tests/` directory contains a suite of automated tests to help you verify your code. **You should not modify these files.** To run the tests, follow these steps in your terminal:
-```bash
-    # 1. Configure CMake (only needs to be done once)
-    cmake -S . -B build
+# 🕵️‍♂️ Debugging Warm-up
 
-    # 2. Build the project (including your code and the tests)
-    cmake --build build
+Welcome to our daily debugging challenge! The goal of these warm-ups is to sharpen your problem-solving skills by analyzing existing code, identifying bugs, and fixing them. This is one of the most important and common tasks for a professional software developer.
 
-    # 3. Run the tests
-    cd build
-    ctest --output-on-failure
-    cd .. 
-```
-  Your goal is to get all tests to pass.
-  
-4. **Commit Your Changes:** Commit your work in small, logical chunks. Remember to use `git add <file>` to stage only the specific files you changed and write a clear, semantic commit message.
-```bash
-    git add src/my_file.cpp include/my_file.h
-    git commit -m "feat: implement the core calculation logic"
-```
-### Part 3: Submission
-1. **Push Your Branch:** Once your code is complete and all tests are passing, push your branch to GitHub.
-```bash
-    git push origin add/feature-name
-```
+## 🎯 Objective
+
+Your mission is to find and fix all the bugs in this repository. The code provided does not work as intended. It may have syntax errors that prevent it from compiling, or it may have logical errors that cause it to run incorrectly or crash.
+
+## ⚙️ Setup & Workflow
+
+Follow these steps to get the assignment set up correctly within your Codespace environment.
+
+1.  **Clone the Assignment:** In your Codespace terminal, make sure you are in the root directory (`/workspaces/<YourName>`). Clone this assignment repository using the `git clone` command and the URL from GitHub Classroom.
+
+    ```bash
+    git clone <your-assignment-repository-url>
+    ```
+
+2.  **Add to Workspace:**
+    * In the top menu, click **File > Add Folder to Workspace...**
+    * Select the folder for this assignment (e.g., `dw01-yourusername`) and click **OK**.
+    * You should now see both your `Home` repository and the assignment folder in the file explorer on the left.
+
+## 🕵️ Your Mission: The Debugging Process
+
+Follow this systematic process to hunt down and eliminate the bugs.
+
+1.  **Attempt to Compile:**
+    * Open the terminal (ctrl+`).
+    * Navigate into this assignment's directory (e.g., `cd dw01-yourusername`).
+    * Run the CMake build process:
+        ```bash
+        cmake -S . -B build
+        cmake --build build
+        ```
+    * **Pay close attention to the compiler errors!** These messages are your first and best clues for finding syntax-related bugs.
+
+2.  **Create a Branch for Your Fix:**
+    * **Direct pushes to the `main` branch are disabled.** You must do all work in 3 feature branch.
+    * Before you start fixing a bug, create a new branch:
+        ```bash
+        # Make sure you are on the main branch and have the latest changes
+        git checkout main
+        git pull
+
+        # Create and switch to a new branch
+        git checkout -b fix/program-bugs
+        ```
+
+4.  **Investigate and Fix:**
+    * Now, on your new branch, make the necessary code changes to fix the bug.
+    * Once you have a fix, commit your changes with a clear and descriptive commit message that references the issue number:
+        ```bash
+        git add <files you changed>
+        git commit -m "fix: <what you fixed>"
+        ```
+
+## ✅ Submission
+
+Your assignment is complete when all bugs are fixed and all tests are passing. To submit your work, you will create a Pull Request for each branch you created.
+
+1.  **Push Your Branch:** Push your committed changes from your local branch up to GitHub.
+    ```bash
+    git push -u origin fix/issue-name
+    ```
+
+2.  **Open a Pull Request:**
+    * Use the GitHub Pull Request extension in VS Code to create a pull request.
+
+3.  **Merge the Pull Request:**
+    * Once the Pull Request is open, you can review your changes and then click **"Merge Pull Request"** to merge your fix into the `main` branch. Your work is considered submitted once all fixes are merged into the `main` branch.
