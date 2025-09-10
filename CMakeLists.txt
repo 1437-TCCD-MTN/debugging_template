@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.10)
 
 # Define the project name, version, and languages
 project(
-    PROJECT
+    debugging
     VERSION 0.1.0
     DESCRIPTION ""
     LANGUAGES CXX)

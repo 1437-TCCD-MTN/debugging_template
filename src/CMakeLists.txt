@@ -1,7 +1,7 @@
-file(GLOB HEADER_LIST "${PROJECT_SOURCE_DIR}/include/PROJECT/*.h;${PROJECT_SOURCE_DIR}/include/tests/*.h")
+file(GLOB HEADER_LIST "${PROJECT_SOURCE_DIR}/include/debugging/*.h;${PROJECT_SOURCE_DIR}/include/tests/*.h")
 
-add_library(PROJECTlib PROJECT_LIBRARY.cpp ${HEADER_LIST})
+add_library(debugginglib LIBRARY.cpp ${HEADER_LIST})
 
-target_include_directories(PROJECTlib PUBLIC ../include/PROJECT)
+target_include_directories(debugginglib PUBLIC ../include/debugging)
 
-target_compile_features(PROJECTlib PUBLIC cxx_std_20)
+target_compile_features(debugginglib PUBLIC cxx_std_20)
