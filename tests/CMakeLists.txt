@@ -15,4 +15,4 @@ macro(package_add_test TESTNAME)
     set_target_properties(${TESTNAME} PROPERTIES FOLDER tests)
 endmacro()
 
-package_add_test(test test.cpp)
+package_add_test(debugging_test debugging_test.cpp)
