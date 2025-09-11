@@ -10,7 +10,7 @@
             "name": "debug",
             "displayName": "Debug Build",
             "description": "Configure to build with debug symbols. Recommended for this assignment.",
-            "binaryDir": "${sourceDir}/build/debug",
+            "binaryDir": "${sourceDir}/build",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": true
@@ -19,7 +19,7 @@
     ],
     "buildPresets": [
         {
-            "name": "debug-default",
+            "name": "Default - Runs like normal",
             "configurePreset": "debug",
             "displayName": "Build All (Debug)",
             "description": "Build all targets in the debug configuration."
@@ -27,7 +27,7 @@
     ],
     "testPresets": [
         {
-            "name": "debug-tests",
+            "name": "Tests - Only runs the tests to make sure all tasks completed.",
             "configurePreset": "debug",
             "output": {
                 "outputOnFailure": true
